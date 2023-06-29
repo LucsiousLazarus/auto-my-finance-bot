@@ -1,0 +1,13 @@
+- This bot will automate all wire/ach manual work/ spreadsheet work
+- Pyhton 3.7.4 File
+- `pip install selenium`
+- `pip install webdriver-manager`
+- `pip install xlrd`
+- `pip install pandas`
+- `pip install openpyxl`
+- `pip install openxlsx`
+- `pip install xlwt`
+- `pip install xlutils`
+
+- import 
+
