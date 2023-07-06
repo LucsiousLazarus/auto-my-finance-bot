@@ -10,17 +10,18 @@ driver.maximize_window()
 
 ## Bank 1 Loop
 # Open the website
-driver.get("https://www.youtube.com/")
+driver.get("https://www6.rbc.com/webapp/ukv0/signin/logon.xhtml?target=/")
 
 # Navigate to the login
 
 # Plug in credentials
-email = driver.find_element_by_id("identifierId")
-passowrd = driver.find_element_by_id("password")
-
-email.send_keys(os.environ.get("EMAIL"))
-email.submit()
-
+email = driver.find_element_by_id("loginForm:username")
+password = driver.find_element_by_id("loginForm:password")
+email.send_keys(os.environ.get('RBC_EMAIL'))
+password.send_keys(os.environ.get('RBC_PASSWORD'))
+submit = driver.find_element_by_id("loginForm:login")
+submit.click()
+driver.implicitly_wait(100)
 # Input Token
 
 # Naviagate to balance summary etc.
